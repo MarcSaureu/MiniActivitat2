@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HelloBye</string>
+    <string name="welcome">Hello World!!</string>
+    <string name="byeMessage">Introduce the Bye Message</string>
+    <string name="byeEditText">Bye Message</string>
+    <string name="repetitions">Introduce the number of repetitions</string>
+    <string name="byeButton">Go to Bye Screen</string>
+    <string name="backButton">Go Back</string>
+    <string name="defaultBye">Hello</string>
+    <string name="defaultRep">2</string>
+</resources>
+
