@@ -39,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
     public void getViews(){
         textView = (TextView) findViewById(R.id.textView);
         edit1 = (EditText) findViewById(R.id.editText);
+        edit1.setHint(R.string.byeEditText);
+        edit1.requestFocus();
         edit2 = (EditText) findViewById(R.id.editText2);
+        edit2.setHint(R.string.repEditText);
         button1 = (Button) findViewById(R.id.button);
     }
 
@@ -47,12 +50,17 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode,resultCode,data);
             if(requestCode==2){
                 if(resultCode == RESULT_OK) {
-                    edit1.getText().clear();
-                    edit1.setHint(R.string.byeEditText);
-                    edit2.getText().clear();
+                    clearText();
                     String message = data.getStringExtra("MESSAGE");
                     textView.setText(message);
                 }
             }
+    }
+    public void clearText(){
+        edit1.getText().clear();
+        edit1.setHint(R.string.byeEditText);
+        edit1.requestFocus();
+        edit2.getText().clear();
+        edit2.setHint(R.string.repEditText);
     }
 }
